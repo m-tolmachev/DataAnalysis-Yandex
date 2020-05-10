@@ -1,0 +1,189 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+
+import plotly.graph_objs as go
+
+from datetime import datetime
+
+import pandas as pd
+
+# задаём данные для отрисовки
+from sqlalchemy import create_engine
+# пример подключения к базе данных для Postresql
+db_config = {'user': 'my_user',         
+                 'pwd': 'my_user_password', 
+                 'host': 'localhost',       
+                 'port': 5432,              
+                 'db': 'zen'}             
+    
+engine = 'postgresql://{}:{}@{}:{}/{}'.format(db_config['user'],
+                                                        db_config['pwd'],
+                                                        db_config['host'],
+                                                        db_config['port'],
+                                                        db_config['db'])
+# получаем сырые данные
+query = '''
+            SELECT * FROM dash_visits
+        '''
+dash_visits = pd.io.sql.read_sql(query, con = engine)
+dash_visits['dt'] = pd.to_datetime(dash_visits['dt'])
+
+query = '''
+            SELECT * FROM dash_engagement
+        '''
+dash_engagement = pd.io.sql.read_sql(query, con = engine)
+dash_engagement['dt'] = pd.to_datetime(dash_engagement['dt'])
+
+note = '''
+          Этот дашборд показывает историю пользовательского взаимодействия с карточками статей. Используйте выбор интервала даты и времени, возрастных групп и тем карточек для управления дашбордом. 
+       '''
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, compress=False)
+app.layout = html.Div(children=[
+
+	html.H1(children = 'Яндекс.Дзен'),
+
+    html.Label(note),
+
+    html.Br(),
+
+    html.Div([  
+
+        html.Div([
+            # выбор временного периода
+            html.Label('Дата и время:'),
+            dcc.DatePickerRange(
+                start_date = dash_visits['dt'].min(),
+                end_date = dash_engagement['dt'].dt.date.max()+pd.DateOffset(1),
+                display_format = 'YYYY-MM-DD',
+                id = 'dt_selector'       
+            ),
+        ], className = 'three columns'),
+
+        html.Div([    
+            # выбор возрастной группы
+            html.Label('Возрастная группа:'),
+            dcc.Dropdown(
+                options = [{'label': x, 'value': x} for x in dash_visits['age_segment'].unique()],
+                value = dash_visits['age_segment'].unique().tolist(),
+                multi = True,
+                id = 'age_segment'
+            ),                   
+        ], className = 'three columns'),    
+
+        html.Div([         
+            # выбор темы карточек
+            html.Label('Тема карточек:'),
+            dcc.Dropdown(
+                options = [{'label': x, 'value': x} for x in dash_visits['item_topic'].unique()],
+                value = dash_visits['item_topic'].unique().tolist(),
+                multi = True,
+                id = 'item_topic_selector'
+            ),                
+        ], className = 'six columns'),
+
+    ], className = 'row'),
+
+    html.Div([
+
+        html.Div([
+            
+            html.Br(),
+            
+            # график итории событий по темам карточек
+            html.Label('Итория событий по темам карточек:'),    
+
+            dcc.Graph(
+                style = {'height': '50vw'},              
+                id = 'history-absolute-visits'
+            ),  
+
+        ], className = 'six columns'),            
+
+        html.Div([
+
+            html.Br(),
+            
+            # график разбивки событий по темам источников
+            html.Label('Разбивка событий по темам источников:'),
+
+            dcc.Graph(
+                style = {'height': '25vw'},
+                id = 'pie_visits'
+            ),  
+
+            # график средней глубины взаимодействия
+            html.Label('Средняя глубина взаимодействия:'),
+
+            dcc.Graph(
+                style = {'height': '25vw'},              
+                id = 'engagement_graph'
+            ),                           
+
+        ], className = 'six columns'),
+
+    ], className = 'row')
+ 
+])
+# описываем логику дашборда
+@app.callback(
+    [Output('history-absolute-visits', 'figure'),
+     Output('pie_visits', 'figure'),
+     Output('engagement_graph', 'figure'),
+    ],
+    [Input('item_topic_selector', 'value'),
+     Input('age_segment', 'value'),
+     Input('dt_selector', 'start_date'),
+     Input('dt_selector', 'end_date')
+    ])
+def update_figures(item_dropdown, age_dropdown, start_date, end_date):
+
+    filtered1 = dash_visits.query('item_topic in @item_dropdown and dt >= @start_date and dt <= @end_date and age_segment in @age_dropdown')
+    filtered2 = dash_engagement.query('dt >= @start_date and dt <= @end_date')
+    stacked_area = filtered1.groupby(['item_topic', 'dt'])['visits'].sum().reset_index()
+    pie_chart = filtered1.groupby('source_topic')['visits'].sum().reset_index()
+    bar_chart = filtered2.groupby('event')['unique_users'].mean().reset_index().sort_values(by = 'unique_users', ascending = False)
+    bar_chart['share'] = round(bar_chart['unique_users'] / bar_chart.loc[1, 'unique_users'] * 100, 2)
+
+    stacked_area_data = []
+    for topic in stacked_area['item_topic'].unique():
+        stacked_tmp = stacked_area[stacked_area['item_topic'] == topic]
+        stacked_area_data += [go.Scatter(x = stacked_tmp['dt'],
+                                     y = stacked_tmp['visits'],
+                                     mode = 'lines',
+                                     stackgroup = 'one',
+                                     name = topic)]
+        pie_chart_data = [go.Pie(labels = pie_chart['source_topic'],
+                           values = pie_chart['visits'],
+                           textinfo='percent+value',
+                           name = 'source_topic')]
+  
+        bar_chart_data = [go.Bar(x = bar_chart['event'],
+                           y = bar_chart['share'],
+                           name = 'event',
+                           text  = bar_chart['share'],
+                           textposition = 'auto',
+                           texttemplate = '%{y:.1f}%')]
+    return (
+          {
+          'data': stacked_area_data,
+          'layout': go.Layout(xaxis = {'title': 'Время'},
+                              yaxis = {'title': 'Визиты'})
+          },
+          {
+          'data': pie_chart_data,
+          'layout': go.Layout()
+          },
+          {
+          'data': bar_chart_data,
+          'layout': go.Layout(xaxis = {'title': 'Событие'},
+                              yaxis = {'title': 'Кол-во пользователей'})
+          })
+    
+if __name__ == '__main__':
+  app.run_server(debug = True, host='0.0.0.0')
