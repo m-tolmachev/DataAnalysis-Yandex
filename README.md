@@ -26,5 +26,5 @@
 <td> <b>4</b></td>
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/4-%20Сборный%20проект%20-1%20.ipynb" target="_blank"><b>Сборный проект-1. Анализ игровой индустрии</b></td>
 <td>Аналитика интернет-магазина игр для консолей и компьютеров. Необходимо выявить определяющие успешность игры закономерности. Это позволит сделать ставку на потенциально популярный продукт и спланировать рекламные кампании.</td>
-<td>pandas, numpy, matplotlib, seaborn, scipy <b>mplcursors</b></td>
+<td><b>pandas, numpy, matplotlib, seaborn, scipy</b></td>
 <tr>
