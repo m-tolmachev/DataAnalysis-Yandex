@@ -46,7 +46,7 @@
 <tr>
 <td> <b>8</b></td>
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/8%20-%20Рынок%20заведений%20общественного%20питания%20Москвы.ipynb"><b>Рынок заведений общественного питания Москвы</b></a></td>
-<td>Исследование проекта для инвесторов по открытию небольшого кафе в Москве. Геовизуализация ресторанов Москвы и Московской области с применением API токена из Яндекс.Геокодер</td>
+<td>Исследование проекта для инвесторов по открытию небольшого кафе в Москве. Геовизуализация ресторанов Москвы и Московской области с применением API токена из Яндекс.Геокодер;<a href="https://docviewer.yandex.ru/view/332161343/?*=QPWgsZhyzPnN64ne%2FpZrE9weo8F7InVybCI6InlhLWRpc2stcHVibGljOi8vUjZoTGxHaUhWYm1laXBORmtST1BEUUIvajB5WEV5bC9kWXRScVByZzZjTkc4dzVMNkpkYlR0b1ArakV2ZGE5UXEvSjZicG1SeU9Kb25UM1ZvWG5EYWc9PSIsInRpdGxlIjoi0J%2FRgNC10LfQtdC90YLQsNGG0LjRjyDQr9C90LTQtdC60YEu0J%2FRgNCw0LrRgtC40LrRg9C8LnBkZiIsIm5vaWZyYW1lIjpmYWxzZSwidWlkIjoiMzMyMTYxMzQzIiwidHMiOjE1ODkyMDk3Njc4MTgsInl1IjoiNjc0MjE4NTM2MTU4MDc1NzI0NSJ9"><b>Рынок заведений общественного питания Москвы</b></a> </td>
 <td>pandas, numpy, matplotlib, scipy,  </b>API, plotly, geopandas, IFrame, HTML, folium, yaml, bokeh</b></td>
 <tr>
 <td> <b>9</b></td>
