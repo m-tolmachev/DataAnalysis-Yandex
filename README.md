@@ -57,6 +57,6 @@
 <td> <b>10</b></td>
 <td><a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Пайплайн%20для%20Яндекс.Дзен" target="_blank"><b>Пайплайн для проекта Яндекс.Дзен</b></a>; 
 <a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Дашборд%20для%20Яндекс.Дзен" target="_blank"><b>Дэшборд для проекта Яндекс.Дзен</b></a></td>
-<td>Проек автоматизации;<ahref="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/master/Яндекс%20Презентация.pdf" target="_blank"><b>Описание реузльтатов дэшборда</b></a></td>
+<td>Проек автоматизации;<a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/master/Яндекс%20Презентация.pdf" target="_blank"><b>Описание реузльтатов дэшборда</b></a></td>
 <td>pandas, numpy, matplotlib, scipy, plotly, </b>math</b></td>
 <tr>
