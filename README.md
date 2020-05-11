@@ -58,7 +58,7 @@
 <td><a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Пайплайн%20для%20Яндекс.Дзен" target="_blank"><b>Пайплайн для проекта Яндекс.Дзен</b></a>; 
 <a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Дашборд%20для%20Яндекс.Дзен" target="_blank"><b>Дэшборд для проекта Яндекс.Дзен</b></a></td>
 <td>В проекте подразумевается создание дэшборда для менеджеров, чтобы автоматизировать процесс отслеживания взаимодействия пользователей с карточками Яндекс.Дзена.Нужно было подключиться к виртуальной машине, через Яндекс.облако, после создать базу данных с помощью терминала, далее создать дата-пайплайн и после загрузить код дашборда. Работа выполняется на основе предоставленного технического задания;<a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/master/Яндекс%20Презентация.pdf" target="_blank"><b>Описание реузльтатов дэшборда</b></a></td>
-<td>postgresql, SQL, sqlalchemy, Яндекс.Облако, dash, sys, getopt, plotly, pandas,></td>
+<td>postgresql, SQL, sqlalchemy, Яндекс.Облако, dash, sys, getopt, plotly, pandas</td>
 <tr>
 </table>
 <br/><br/>
