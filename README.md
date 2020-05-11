@@ -2,10 +2,10 @@
 
 <table>
 <tr>
-<td><b>Номер (по курсу)</b></td>
-<td><b>Название (+ссылка)</b></td>
-<td><b>Суть проекта</b></td>
-<td><b>Используемые библиотеки</b></td>
+<td><b>Номер</b></td>
+<td><b>Название (+ссылка nbviewer)</b></td>
+<td><b>Описание проекта</b></td>
+<td><b>Используемые инструменты</b></td>
 <tr>
 <td><b>1</b></td>
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/1-Исследование%20надежности%20заемщиков.ipynb" target="_blank"><b>Исследование надежности заемщиков</b></a></td>
@@ -32,4 +32,20 @@
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/5%20-%20Аналитика%20в%20авиакомпании.ipynb" target="_blank"><b>Аналитика в авиакомпании</b></a></td>
 <td>По двум датасетам произвести анализ по пунктам импортировать файлы;изучить данные в них; проверить типы данных на корректность; выбрать топ-10 городов по количеству рейсов; построить графики: модели самолетов и количество рейсов, города и количество рейсов, топ-10 городов и количество рейсов;сделать выводы по каждому из графиков, пояснить результат.</td>
 <td>pandas, numpy, matplotlib, scipy, <b>plotly.graph_objs, plotly.offline</b></td>
+<tr>
+<td> <b>6</b></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/6%20-%20Аналитика%20в%20Яндекс.Афише.ipynb" target="_blank"><b>Анализ бизнес-показателей</b></a></td>
+<td>Стажировка в отделе аналитики Яндекс.Афиши. Задача: помочь маркетологам оптимизировать маркетинговые затраты.
+Расчет бизнес-метрик: Retention rate, Churn Rate, LTV, CAC, ROMI.
+<td>pandas, numpy, matplotlib, seaborn</td>
+<tr>
+<td> <b>7</b></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/7-%20Аналитика%20курпного%20интернет%20магазина.%20А%3AВ-тест.ipynb"><b>Анализ результатов AB-теста</b></a></td>
+<td>Вы — аналитик крупного интернет-магазина. Вместе с отделом маркетинга вы подготовили список гипотез для увеличения выручки.Приоритизируйте гипотезы, запустите A/B-тест и проанализируйте результаты. Применение фреймворков ICE, RICE. Построение куммулятивной конверсии.</td>
+<td>pandas, numpy, matplotlib, scipy, plotly.graph_objs, plotly.offline, collections, datetime</td>
+<tr>
+<td> <b>8</b></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/8%20-%20Рынок%20заведений%20общественного%20питания%20Москвы.ipynb"><b>Рынок заведений общественного питания Москвы + Презентация результатов исследования</b></a></td>
+<td>Исследование проекта для инвесторов по открытию небольшого кафе в Москве. Геовизуализация ресторанов Москвы и Московской области с применением API токена из Яндекс.Геокодер</td>
+<td>pandas, numpy, matplotlib, scipy, plotly.graph_objs, plotly.offline, </b>plotly.express, geopandas, IFrame, HTML, folium, yaml, bokeh</b></td>
 <tr>
