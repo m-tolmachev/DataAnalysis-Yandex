@@ -54,3 +54,8 @@
 <td>ААВ-тестирование, множественное тестирование и применение поправок к полученным результатам.</td>
 <td>pandas, numpy, matplotlib, scipy, plotly, </b>math</b></td>
 <tr>
+<td> <b>10</b></td>
+<td><a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Пайплайн%20для%20Яндекс.Дзен" target="_blank"><b>Пайплайн для проекта Яндекс.Дзен</b></a><a href="https://github.com/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/Дашборд%20для%20Яндекс.Дзен" target="_blank"><b>Дэшборд для проекта Яндекс.Дзен</b></a></td>
+<td>Проек автоматизации</td>
+<td>pandas, numpy, matplotlib, scipy, plotly, </b>math</b></td>
+<tr>
