@@ -49,3 +49,8 @@
 <td>Исследование проекта для инвесторов по открытию небольшого кафе в Москве. Геовизуализация ресторанов Москвы и Московской области с применением API токена из Яндекс.Геокодер</td>
 <td>pandas, numpy, matplotlib, scipy, plotly.graph_objs, plotly.offline, </b>plotly.express, geopandas, IFrame, HTML, folium, yaml, bokeh</b></td>
 <tr>
+<td> <b>9</b></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/9%20-%20%20Сборный%20проект%20-%202.%20ААВ-тесты.ipynb" target="_blank"><b>Сборный проект-2. ААВ-тесты</b></a></td>
+<td>ААВ-тестирование, множественное тестирование и применение поправок к полученным результатам.</td>
+<td>pandas, numpy, matplotlib, scipy, plotly, </b>math</b></td>
+<tr>
