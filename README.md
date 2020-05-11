@@ -45,7 +45,7 @@
 <td>pandas, numpy, matplotlib, scipy, plotly.graph_objs, plotly.offline, collections, datetime</td>
 <tr>
 <td> <b>8</b></td>
-<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/8%20-%20Рынок%20заведений%20общественного%20питания%20Москвы.ipynb"><b>Рынок заведений общественного питания Москвы + Презентация результатов исследования</b></a></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/acc8a1b934b1e474f6119cad2bccb5c1d35d15fb/8%20-%20Рынок%20заведений%20общественного%20питания%20Москвы.ipynb"><b>Рынок заведений общественного питания Москвы</b></a></td>
 <td>Исследование проекта для инвесторов по открытию небольшого кафе в Москве. Геовизуализация ресторанов Москвы и Московской области с применением API токена из Яндекс.Геокодер</td>
 <td>pandas, numpy, matplotlib, scipy,  </b>API, plotly, geopandas, IFrame, HTML, folium, yaml, bokeh</b></td>
 <tr>
