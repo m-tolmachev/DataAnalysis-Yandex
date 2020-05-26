@@ -1,5 +1,5 @@
 ## <a href="https://praktikum.yandex.ru/data-analyst/" target="_blank"><b>Яндекс. Практикум "Аналитик данных"</b></a>
-## <b>Мои проекты в течении учебного курса"</b></a>
+## <b>Проекты в течении учебного курса</b></a>
 
 <table>
 <tr>
@@ -64,7 +64,22 @@
 <td> <b>11</b></td>
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/862078946a730f0cdf776b892f344c750a7101ab/11%20-%20Machine%20Learning.ipynb" target="_blank"><b>Проект по курсу Machine Learning</b></a></td>
 <td>Сеть фитнес-центров разрабатывает стратегию взаимодействия с пользователями на основе аналитических данных. Задача проекта -  провести анализ и подготовить план действий по удержанию клиентов. В данном проекте на основании метрик: Accuracy, Precision, Recall, F1, ROC_AUC выбираю подходящую модель прогнозирования из двух обученных: LogisticRegression и RandomForestClassifier. Так же делаю кластеризацию на основании построенной дендограммы и на оснвоании полученных кластеров строю гистограммы распределения, по которым делаю выводы и прогнозы. </td>
-<td>pandas, seaborn, </b>sklearn, scipy.cluster.hierarchy, sklearn.metrics</b>  plotly, </td>
+<td>pandas, seaborn, </b>sklearn, scipy.cluster.hierarchy, sklearn.metrics</b>  plotly </td>
 <tr>
 </table>
 <br/><br/>
+
+## <b>Финальные проекты. Формат 2-х недельного буткемпа.</b></a>
+
+<table>
+<tr>
+<td><b>Номер</b></td>
+<td><b>Название (+ссылка nbviewer)</b></td>
+<td><b>Описание проекта</b></td>
+<td><b>Используемые инструменты</b></td>
+<tr>
+<td><b>1</b></td>
+<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/db7f5085cb6de230112c2a4caf12795668707f69/Международный%20интернет_магазин%20A%3AB-тест.ipynb" target="_blank"><b>Международный интернет_магазин A/B тест</b></a></td>
+<td>Вам поступила аналитическая задача от международного интернет-магазина. Ваш предшественник не закончил её — запустил А/B-тест и уволился. Осталось только техническое задание и результаты теста. Загрузите данные теста, проверьте корректность его проведения и проанализируйте полученные результаты. </td>
+<td><b>pandas, numpy, matplotlib, scipy, plotly, seaborn</b></td>
+<tr>
