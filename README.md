@@ -1,4 +1,5 @@
 ## <a href="https://praktikum.yandex.ru/data-analyst/" target="_blank"><b>Яндекс. Практикум "Аналитик данных"</b></a>
+## <a href="https://praktikum.yandex.ru/data-analyst/" target="_blank"><b>Мои проекты в течении учебного курса"</b></a>
 
 <table>
 <tr>
