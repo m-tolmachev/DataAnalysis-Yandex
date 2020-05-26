@@ -8,7 +8,7 @@
 <tr>
 <td><b>3)</b></td>
 <a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/db7f5085cb6de230112c2a4caf12795668707f69/11%20-%20Machine%20Learning.ipynb" target="_blank"><b>Машинное обучение;
-<tr>
+
 ## <b>Проекты учебного курса</b></a>
 
 <table>
