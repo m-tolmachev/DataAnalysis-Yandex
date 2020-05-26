@@ -1,6 +1,6 @@
 ## <a href="https://praktikum.yandex.ru/data-analyst/" target="_blank"><b>Яндекс. Практикум "Аналитик данных"</b></a>
 ## <b>Мои лучшие проекты</b></a>
-<td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/db7f5085cb6de230112c2a4caf12795668707f69/Международный%20интернет_магазин%20A%3AB-тест.ipynb" target="_blank"><b>Международный интернет-магазин</b></a></td>
+<a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/db7f5085cb6de230112c2a4caf12795668707f69/Международный%20интернет_магазин%20A%3AB-тест.ipynb" target="_blank"><b>Международный интернет-магазин</b></a>
 <tr>
 <td><a href="https://nbviewer.jupyter.org/github/m-tolmachev/DataAnalysis-Yandex/blob/db7f5085cb6de230112c2a4caf12795668707f69/11%20-%20Machine%20Learning.ipynb" target="_blank"><b>Машинное обучение</b></a></td>
 <tr>
